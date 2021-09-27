@@ -1,0 +1,29 @@
+<h2>crear una nueva publi</h2>
+
+<form action="/post-create" method="POST" >
+
+    <label for="">titulos</label>
+    <input 
+    type="text" 
+    name="title" 
+    >
+
+    <label for="">contenido</label>
+    <textarea 
+    name="content" 
+    type="text" 
+     ></textarea>
+
+    <label for="author-select">
+        <select name="author">
+            <option disable selected value=""></option>
+            {{#each dbUsers}}
+                <option value="{{this._id}}">{{this.username}}</option>
+            {{/each}}
+        </select>
+   
+    </label>
+    
+    <button type="submit">crear la publicacion</button>
+
+</form>
