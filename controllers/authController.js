@@ -96,3 +96,15 @@ exports.loginUserForm = async (req, res) => {
     }
 
 }
+
+exports.logoutUser = (req, res) => {
+
+    //ELIMINAR LA COOKIE DEL NAVEGADOR
+    req.session.destroy((err) => {
+        if(err){
+            console.log(err)
+        }
+        
+        res.redirect("/")
+    })
+}
