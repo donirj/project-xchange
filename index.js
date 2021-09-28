@@ -24,6 +24,14 @@ app.use(express.urlencoded({extended: true}))
 //ACTIVA GESTION DE SESIONES
 require("./config/session.config")(app)
 
+//g. Establecer req.session en layout.hbs
+//Layout middleware
+app.use((req, res, next) => {
+    res.locals.currentUser = req.session.currentUser
+
+    next()
+})
+
 
 //3 ruteo
 

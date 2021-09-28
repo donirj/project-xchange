@@ -8,7 +8,7 @@ const routeGuards       = require("./../middlewares/route-guard")
 
 // GET - Obtener perfil del usuario
 
-router.get("/user/profile", routeGuards.isLoggedIn,
+router.get("/profile", routeGuards.isLoggedIn,
 userController.createProfile)
 
 

@@ -85,11 +85,7 @@ exports.loginUserForm = async (req, res) => {
     // 5. SI LA CONTRASEÑA COINCIDE, ENTONCES... 
     //CREAR UNA SESIÓN Y RETORNAR PÁGINA DE ÉXITO
        req.session.currentUser = foundUser
-        console.log(req.session.currentUser)
-    
-        return res.render("users/profile", {
-                foundUser
-            })
+        return res.redirect("/user/profile")
         
     } catch (error) {
         console.log(error)
