@@ -3,7 +3,10 @@
 
 {{#if foundUser}}
 
-    Hola {{foundUser.username}}
+    Hola {{foundUser.username}}, crea un producto aqui:
+    <button>
+    <a href="http://localhost:3000/products/create">Crear producto</a>
+    </button>
 
     {{else}}
     <p>Aún no has iniciado sesión</p>

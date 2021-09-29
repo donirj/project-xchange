@@ -1,0 +1,18 @@
+
+<h1>Listado de publicaciones</h1>
+
+
+
+
+{{#each productList}}
+    <div>
+    <h2>{{title}}</h2>
+    <p>Anunciado por: {{author}}</p>
+    <p>Descripción: {{description}}</p>
+    <a href="#">Ver detalles</a>
+        {{!-- <a class="lists" href="/drones/{{_id}}/">Editar producto</a> --}}
+    </div>
+
+    <hr />
+
+{{/each}}

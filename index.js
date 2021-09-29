@@ -34,16 +34,19 @@ app.use((req, res, next) => {
 
 
 //3 ruteo
-
+//primer parentesis es el prefijo de las rutas
 app.use("/auth", require("./routes/auth"))
 app.use("/user", require("./routes/user"))
-app.use("/posts", require("./routes/post"))
+app.use("/products", require("./routes/products"))
+app.use("/dogs", require("./routes/dogs"))
+
 
 app.get("/", (req, res) => {
 res.render("index")
 })
 
 // 4. SERVIDOR
+//DAEMON- apertura de puerto
 app.listen(process.env.PORT, () => {
     console.log(`svr activado: ${process.env.PORT}`)
     return
