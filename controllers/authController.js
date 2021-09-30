@@ -12,7 +12,7 @@ exports.createUser = async (req, res) => {
 
 
 exports.createUserForm = async (req, res) => {
-
+    console.log(req.params)
     // 1. OBTENER LOS DATOS DEL FORMULARIO
     const { username, email, password } = req.body
     
@@ -38,7 +38,7 @@ exports.createUserForm = async (req, res) => {
  
 
     // 4. RETORNAR UNA PÁGINA O UNA REDIRECCIÓN PARA QUE EL USUARIO SEPA QUE LO HIZO BIEN
-       
+       res.redirect("/auth/login")
 
 }
 
