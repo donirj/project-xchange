@@ -15,33 +15,41 @@
         <p>No estoy loggeado</p>
     {{/if}} --}}
     
-    <nav>
+    <nav class="topnav">
         <ul>
             
             {{#if currentUser}}
-                <li>
-                    <a href="/user/profile">Mi perfil</a>
+            <div class="links">
+                <li class="links1">
+                    <a  class="links0" href="/user/profile">Mi perfil</a>
                 </li>
-                <li>
-                     <a href="/products">Lista de productos</a>
+                 <li class="links1">
+                     <a class="links0" href="http://localhost:3000/products/create">Crear productos</a>
+                </li>
+                <li class="links1">
+                     <a class="links0" href="/products">Lista de productos</a>
                 </li>
                 <li>
                     <form action="/auth/logout" method="POST">
                         <button>Cerrar sesión</button>
                     </form>
                 </li>
+            </div>
             {{else}}
-                <li>
-                    <a href="/auth/signup">Registrarme</a>
+            <div class="links">
+                <li class="links1">
+                    <a class="links0" href="/auth/signup">Registrarme</a>
                 </li>
-                <li>
-                    <a href="/auth/login">Iniciar sesión</a>
+                <li class="links1">
+                    <a class="links0" href="/auth/login">Iniciar sesión</a>
                 </li>
+            </div>
             {{/if}}
      
         </ul>
 
     </nav>
+  
     
     {{{body}}}
     

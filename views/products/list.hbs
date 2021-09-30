@@ -5,14 +5,17 @@
 
 
 {{#each productList}}
-    <div>
-    <h2>{{title}}</h2>
-    <p>Anunciado por: {{author}}</p>
-    <p>Descripción: {{description}}</p>
-    <a href="#">Ver detalles</a>
-        {{!-- <a class="lists" href="/drones/{{_id}}/">Editar producto</a> --}}
-    </div>
+<div class="grid-container">
+    <div class="grid-item">    
+        <h2>{{title}}</h2>
+        <p>Anunciado por: {{author}}</p>
+        <p>Descripción: {{description}}</p>
+        <a href="/products/{{id}}">Ver detalles</a>
+        <a href="/products/{{id}}/edit">Editar producto</a>
+        <br><a class="deletebtn" href="">Borrar producto</a>
+    </div>    {{!-- <a class="lists" href="/drones/{{_id}}/">Editar producto</a> --}}
+</div>
 
-    <hr />
+
 
 {{/each}}

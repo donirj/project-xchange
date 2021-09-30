@@ -39,7 +39,7 @@ app.use("/auth", require("./routes/auth"))
 app.use("/user", require("./routes/user"))
 app.use("/products", require("./routes/products"))
 app.use("/dogs", require("./routes/dogs"))
-
+app.use("/cats", require("./routes/cats"))
 
 app.get("/", (req, res) => {
 res.render("index")

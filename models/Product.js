@@ -5,7 +5,8 @@ const productSchema = new Schema({
     title: String,
     description: String,
     author: String,
-    img: String
+    img: String,
+    
 })
 
 // 3. GENERACIÓN DEL MODELO

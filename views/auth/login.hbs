@@ -1,33 +1,32 @@
 {{!-- views/auth/login --}}
 
-<div>
-    
-    <h2>Iniciar sesión</h2>
+<div class="signbox">
+    <form action="/auth/login" method="POST" class="signup">
+        <div class="signup1">
+            <h2>Iniciar sesión</h2>
+                <h2>Email</h2>
+                <input 
+                    type="email"
+                    name="email"
+                    placeholder="m@mikenieva.com"
+                />
 
-    <form action="/auth/login" method="POST">
-        <h2>Email</h2>
-        <input 
-            type="email"
-            name="email"
-            placeholder="m@mikenieva.com"
-        />
 
+                <h2>Password</h2>
+                <input 
+                    type="password"
+                    name="password"
+                    placeholder="holamundo"
+                />
 
-        <h2>Password</h2>
-        <input 
-            type="password"
-            name="password"
-            placeholder="holamundo"
-        />
+                <button type="submit">
+                    Iniciar sesión
+                </button>
 
-        <button type="submit">
-            Iniciar sesión
-        </button>
-
-        {{#if errorMessage}}
-            <p style="color: red">{{errorMessage}}</p>
-        {{/if}}
-
+                {{#if errorMessage}}
+                    <p style="color: red">{{errorMessage}}</p>
+                {{/if}}
+        </div>
 
     </form>
 

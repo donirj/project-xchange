@@ -21,8 +21,33 @@ router.get("/create", (req, res) => {
 router.post("/create", productController.create)
  //VER INFORMACION DEL FORMULARIO
 router.get("/", productController.productsList)
+
+//UPDATE PRODUCT
+//http://localhost:3000/products/id/edit
+router.get("/:productUpdateid/edit", productController.productUpdate)
+//UPDATE FORM
+router.post("/:productUpdateid/edit", productController.productForm)
+
+ //VER UN SOLO LIBRO
+router.get("/:productid", productController.oneProduct)
+
+
+//esto no sirve
  //EDITAR PRODUCTOS
- router.get('/:id/edit', productController.edit)
+ router.get('edit', (req, res, next) => {
+
+    const productId = req.params.id;
+    Product.findById(productId)
+    .then((productToEdit) => {
+        console.log(productToEdit)
+        res.render("products/update", {product: productToEdit})
+    })
+    .catch(() => {console.log(e)})
+ })
+
+ 
+ 
+ 
 
 // 3. EXPORTACIÓN
 module.exports = router

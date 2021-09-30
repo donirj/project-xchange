@@ -1,24 +1,14 @@
+<div class="signbox">
+    <div class="signup">
+        <div class="signup1">
+            <h1>{{title}}</h1>
+            <h2>{{description}}</h2>
+            <p>{{author}}</p>
+            <p>{{img}}</p>
+        </div>
+    </div>
+</div>
 
-
-    <h2 class="lists">Update</h2>
-    <ul class="lists">
-        <h1>{{title}}</h1>
-        <h2>{{description}}</h2>
-        <p>{{author}}</p>
-        <p>{{img}}</p>
-    </ul>
-        {{!--reemplazar comillas--}}
-    <form action="/products/{{id}}/edit" method="POST">
-        <label for="label-name">Titulo</label>
-        <input type="text" name="title" id="label-name" value="{{title}}">
-        <label for="label-description">Descripción</label>
-        <input type="text" name="description" id="label-description" value="{{description}}">
-        <label for="label-speed">Autor</label>
-        <input type="text" name="author" id="label-author" value="{{author}}">
-        <label for="label-speed">Autor</label>
-        <input type="text" name="img" id="label-img" value="{{img}}">
-        <button  type="submit">Update</button>
-    </form>
 {{!-- <h2>Update</h2>
 {{#each this}}
     <h2 class="lists">Update the drone</h2>
