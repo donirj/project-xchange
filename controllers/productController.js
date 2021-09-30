@@ -67,7 +67,7 @@ exports.productUpdate = (req, res) => {
    Product.findById(productUpdateid)
    .then((producto) => {
        console.log(producto)
-       res.render("products/update", producto)
+       res.render("products/update", producto)//ESTA ES LA DIRECCION A DONDE ME MANDA
    })
    .catch((e) => {
        console.log(e)
@@ -83,10 +83,25 @@ exports.productForm = (req, res) => {
     Product.findByIdAndUpdate(productUpdateid,{title, description, author, img},{new:true})
     .then(() => {
         
-        res.redirect("/products")
+        res.redirect("/products")//ESTA ES LA DIRECCION A DONDE ME MANDA
     })
     .catch((e) => {
         console.log(e)
     })
 
+}
+
+exports.productDelete = (req, res) => {
+   
+    // console.log(req.params)
+    // res.redirect("/products")
+    console.log(req.params)
+    const { prodDeleteid } = req.params
+    Product.findByIdAndDelete(prodDeleteid)
+    .then(() => {
+        res.redirect("/products")//ESTA ES LA DIRECCION A DONDE ME MANDA
+    })
+    .catch((e) => {
+        console.log(e)
+    })
 }

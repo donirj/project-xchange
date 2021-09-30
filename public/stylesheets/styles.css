@@ -45,7 +45,6 @@ body{
        
     }
     
-    
     .imgbox{
         width: 100%;
     }
@@ -67,7 +66,7 @@ body{
         background-color: white;
         width: 30%;
         border-radius: 25px;
-        margin-top: 100px;
+        margin-top: 70px;
         border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px;
@@ -94,6 +93,11 @@ body{
         background-color: white;
     }
     
+    .formedit{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 
     .logcontain1{
         display: flex;
@@ -111,5 +115,41 @@ body{
         margin-top: 10px;
     }
   
+    .pic1{
+        height: 100px;
+        width: 100px;
+    }
 
+  .cerrar{
+    background-color:black;
+    color: white;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.cerrar a:hover {
+    background-color:black;
+    color: white;
+    }
+    .ver1 a.active {
+        background-color: black;
+        color: white;
+    }
+
+  .ver1{
+    text-decoration: none !important;
+    color: black;
+  }
+  .ver1 a:hover {
+    background-color:black;
+    color: white;
+    }
+    .ver1 a.active {
+        background-color: black;
+        color: white;
+    }
 }

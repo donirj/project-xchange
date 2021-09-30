@@ -1,15 +1,18 @@
 
-
-    <h2 class="lists">Update</h2>
-    <ul class="lists">
-        <h1>{{title}}</h1>
-        <h2>{{description}}</h2>
-        <p>{{author}}</p>
-        <p>{{img}}</p>
-    </ul>
-        {{!--reemplazar comillas--}}
-    <form action="/products/{{id}}/edit" method="POST">
-        <label for="label-name">Titulo</label>
+<div class="signbox">
+    <div class="signup">
+        <h2 class="lists">Edita tu objeto</h2>
+        <ul class="lists">
+            <h1>Título: {{title}}</h1>
+            <h2>Descripción: {{description}}</h2>
+            <p>Autor: {{author}}</p>
+            <img class="pic1" src={{img}} alt="fotografia">
+        </ul>
+    </div>
+</div><br><br>
+        
+    <form class="formedit" action="/products/{{id}}/edit" method="POST">
+        <label for="label-name">Titulo:</label>
         <input type="text" name="title" id="label-name" value="{{title}}">
         <label for="label-description">Descripción</label>
         <input type="text" name="description" id="label-description" value="{{description}}">
@@ -19,24 +22,3 @@
         <input type="text" name="img" id="label-img" value="{{img}}">
         <button  type="submit">Update</button>
     </form>
-{{!-- <h2>Update</h2>
-{{#each this}}
-    <h2 class="lists">Update the drone</h2>
-    <ul class="lists">
-        <li>Titulo: {{this.title}}</li>
-    <li>Descripción: {{this.description}}</li>
-    <li>Autor: {{this.author}}</li>
-    <li>Url: {{this.img}}</li>
-    </ul>
-
-    <form action=“/products/{{this._id}}/edit” method=“POST”>
-    <label for=“label-name”>Titulo</label>
-    <input type=“text” name=“title” id=“label-name” placeholder=“{{this.title}}“>
-    <label for=“label-propellers”>Descripción</label>
-    <input type=“text” name=“description” id=“label-propellers” placeholder=“{{this.description}}“>
-    <label for=“label-speed”>Autor</label>
-    <input type=“text” name=“author” id=“label-speed” placeholder=“{{this.author}}“>
-    <label for=“label-speed”>Autor</label>
-    <input type=“text” name=“author” id=“label-speed” placeholder=“{{this.img}}“>
-    <button type=“submit”>Update</button>
-{{#each}} --}}

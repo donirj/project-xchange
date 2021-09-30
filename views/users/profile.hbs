@@ -1,20 +1,22 @@
 {{!-- views/users/profile.hbs --}}
 <div class="signbox">
-    <div class="signup1">
-    <h1>Tu perfil</h1>
+    <div class="signup">
+        <div class="signup1">
+        <h1>Tu perfil</h1>
 
-    {{#if foundUser}}
+        {{#if foundUser}}
 
-        Hola {{foundUser.username}}, agrega un objeto
-        para que los demás usuarios puedan verlo. <br><br>
-        No olvides dejar tu contacto en la descripción por si alguien se interesa en tu objeto.
-        <br><br> Crea un producto aqui:
-        <button>
-        <a href="http://localhost:3000/products/create">Crear producto</a>
-        </button>
+            Hola {{foundUser.username}}, agrega un objeto
+            para que los demás usuarios puedan verlo. <br><br>
+            No olvides dejar tu contacto en la descripción por si alguien se interesa en tu objeto.
+            <br><br> Crea un producto aqui:
+            <button>
+            <a href="http://localhost:3000/products/create">Crear producto</a>
+            </button>
 
-        {{else}}
-        <p>Aún no has iniciado sesión</p>
-    {{/if}}
-    </div>
+            {{else}}
+            <p>Aún no has iniciado sesión</p>
+        {{/if}}
+        </div>
+    </div>  
 </div>

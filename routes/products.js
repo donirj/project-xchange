@@ -17,18 +17,24 @@ router.get("/create", (req, res) => {
 
 })
 
+//DELETE PRODUCT
+router.post("/:prodDeleteid/delete", productController.productDelete)
+
+
  //TRABAJAR FORMULARIO
 router.post("/create", productController.create)
  //VER INFORMACION DEL FORMULARIO
+ //http://localhost:3000/products/list
 router.get("/", productController.productsList)
 
 //UPDATE PRODUCT
-//http://localhost:3000/products/id/edit
+//http://localhost:3000/products/id/edit <- esta es mi ruta
 router.get("/:productUpdateid/edit", productController.productUpdate)
+///:productUpdateid/edit (ESTE ES EL OBJETO DEL EXPORTS)
 //UPDATE FORM
 router.post("/:productUpdateid/edit", productController.productForm)
-
- //VER UN SOLO LIBRO
+///:productUpdateid/edit (ESTE ES EL OBJETO DEL EXPORTS)
+ //VER UN SOLO PRODUCTO
 router.get("/:productid", productController.oneProduct)
 
 
