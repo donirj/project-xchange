@@ -6,6 +6,89 @@ body{
     background-color: lightskyblue;
 }
 
+.topnav{
+   
+    width: 100%;
+}
+.topnav a:hover {
+    background-color:black;
+    color: white;
+}
+.topnav a.active {
+    background-color: black;
+    color: white;
+  }
+
+  .logo1{
+    height: 300px;
+    width: 300px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+
+.links0{
+    text-decoration: none !important;
+    color: black;
+   
+}
+
+.imgbox{
+    width: 100%;
+}
+
+.img1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.signbox{
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+
+.signup{
+    background-color: white;
+    width: 40%;
+    border-radius: 25px;
+    margin-top: 70px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+
+}
+.signup1{
+    margin: 25px;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 60px;
+    margin: 20px;
+    
+
+  }
+
+.grid-item{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
 @media(min-width:601px) {
 
     .logo1{
